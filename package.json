@@ -1,0 +1,14 @@
+{
+  "name": "guess-my-number",
+  "version": "1.0.0",
+  "description": "Guess my Number using js",
+  "main": "script.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss style.css -w"
+  },
+  "author": "Nick Velazquez",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.2"
+  }
+}
