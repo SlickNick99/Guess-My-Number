@@ -4,15 +4,16 @@ const guessNumberTitle = document.querySelector(".header-title");
 const number = document.querySelector(".number");
 const labelScore = document.querySelector(".score");
 const playAgain = document.querySelector(".header-btn");
+const guess = document.querySelector(".guess");
 
-const defaultHeader = "Guess My Number";
+const defaultHeader = "Guess My Number!";
 const defaultNumber = (document.querySelector(
   ".number"
 ).style.cssText = `width: 15rem; background-color: #eee;`);
 const defaultMessage = function (selector, message) {
   document.querySelector(selector).textContent = message;
 };
-const secretNumber = Math.floor(Math.random() * 20) + 1;
+let secretNumber = Math.floor(Math.random() * 20) + 1;
 
 let score = 20;
 let highScore = 0;
@@ -56,4 +57,7 @@ playAgain.addEventListener("click", function () {
   number.style = defaultNumber;
   number.textContent = "?";
   guessNumberTitle.textContent = defaultHeader;
+  guess.value = "";
+  secretNumber = Math.floor(Math.random() * 20) + 1;
+  console.log(secretNumber);
 });
